@@ -40,7 +40,11 @@ npm-debug.log
 yarn-error.log
 testem.log
 /typings
+<<<<<<< HEAD
 /package-lock.json
+=======
+package-lock.json
+>>>>>>> d29fa60a58cc72735ea44279db677140ca10cc4f
 
 # System Files
 .DS_Store
