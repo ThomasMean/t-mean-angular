@@ -48,11 +48,13 @@
       true,
       "debug",
       "info",
+      "log",
       "time",
       "timeEnd",
       "trace"
     ],
     "no-empty": false,
+    "no-focused-test": true,
     "no-inferrable-types": [
       true,
       "ignore-params"
@@ -86,6 +88,7 @@
     "use-pipe-transform-interface": true
   },
   "rulesDirectory": [
-    "codelyzer"
+    "codelyzer",
+    "tslint-no-focused-test"
   ]
 }
