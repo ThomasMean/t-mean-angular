@@ -26,5 +26,5 @@ steps:
   displayName: 'run linting'
   
 - script: |
-    ng test
+    npm run test-pipeline
   displayName: 'run testing'
