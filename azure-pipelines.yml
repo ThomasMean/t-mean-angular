@@ -28,3 +28,7 @@ steps:
 - script: |
     npm run test-pipeline
   displayName: 'run testing'
+
+  - script: |
+    ng deploy
+  displayName: 'deploy to github pages'
