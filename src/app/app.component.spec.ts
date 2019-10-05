@@ -4,6 +4,8 @@ import { AppComponent } from './app.component';
 import { HeaderComponent } from './components/header/header.component';
 import { ProfileComponent } from './components/profile/profile.component';
 import { MatToolbarModule } from '@angular/material';
+import { WorkHistoryComponent } from './components/work-history/work-history.component';
+import { WorkHistoryJobComponent } from './components/work-history/work-history-job/work-history-job.component';
 
 describe('AppComponent', () => {
   beforeEach(async(() => {
@@ -15,7 +17,9 @@ describe('AppComponent', () => {
       declarations: [
         AppComponent,
         HeaderComponent,
-        ProfileComponent
+        ProfileComponent,
+        WorkHistoryComponent,
+        WorkHistoryJobComponent
       ],
     }).compileComponents();
   }));
