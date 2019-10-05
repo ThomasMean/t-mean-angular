@@ -1,4 +1,12 @@
-<h4>{{ school.startDate }} - {{ school.endDate }}</h4>
-{{ school.name }}
-<br />
-{{ school.level }} in {{ school.subjects.join(', ') }}
+<div>
+  <span
+    ><strong>{{ school.name }}</strong></span
+  >
+  <span> | </span>
+  <span
+    ><em>{{ school.startDate }} - {{ school.endDate }}</em></span
+  >
+</div>
+<small>
+  <p>{{ school.level }} in {{ school.subjects.join(', ') }}</p>
+</small>

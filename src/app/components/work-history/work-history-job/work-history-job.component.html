@@ -1,2 +1,15 @@
-<h4>{{job.startDate}} - {{job.endDate}}</h4>
-{{job.role}} at <a href="{{job.website}}" target="_blank">{{job.company}}</a>
+<div>
+  <span
+    ><strong
+      >{{ job.role }} at <a href="{{ job.website }}" target="_blank">{{ job.company }}</a></strong
+    ></span
+  >
+  <span> | </span>
+  <span
+    ><em>{{ job.startDate }} - {{ job.endDate }}</em></span
+  >
+</div>
+<small>
+  <p>{{ job.description }}</p>
+  <p>Languages: {{ job.languages.join(', ') }}</p>
+</small>

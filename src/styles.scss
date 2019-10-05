@@ -1,7 +1,7 @@
 /* You can add global styles to this file, and also import other style files */
 
-$ionicons-font-path: "~ionicons/dist/fonts";
-@import "~ionicons/dist/scss/ionicons.scss";
+$ionicons-font-path: '~ionicons/dist/fonts';
+@import '~ionicons/dist/scss/ionicons.scss';
 
 html,
 body {
@@ -9,7 +9,7 @@ body {
 }
 body {
   margin: 0;
-  font-family: Roboto, "Helvetica Neue", sans-serif;
+  font-family: 'Exo 2', sans-serif;
 }
 
 a {
