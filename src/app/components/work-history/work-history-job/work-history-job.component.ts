@@ -1,5 +1,6 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { Job } from 'src/app/models/job.model';
+import { Timestamp } from 'rxjs';
 
 @Component({
   selector: 'app-work-history-job',
@@ -10,9 +11,14 @@ export class WorkHistoryJobComponent implements OnInit {
 
   @Input() job: Job;
 
+
   constructor() { }
+
 
   ngOnInit() {
   }
+
+
+
 
 }

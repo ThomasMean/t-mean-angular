@@ -1,5 +1,8 @@
 import { Component, OnInit } from '@angular/core';
-import { Job } from 'src/app/models/job.model';
+import { AngularFirestore } from '@angular/fire/firestore';
+import { Observable } from 'rxjs';
+
+
 
 @Component({
   selector: 'app-work-history',
@@ -8,30 +11,11 @@ import { Job } from 'src/app/models/job.model';
 })
 export class WorkHistoryComponent implements OnInit {
 
-  constructor() { }
-  jobs: Job[] = [
-    {
-      startDate: 'Jun 2018',
-      endDate: 'Present',
-      role: 'Consultant',
-      company: 'Santander UK Technology',
-      website: 'https://www.santandertechnology.co.uk/'
-    },
-    {
-      startDate: 'Sep 2017',
-      endDate: 'Jun 2018',
-      role: 'Graduate Trainee',
-      company: 'Santander UK Technology',
-      website: 'https://www.santandertechnology.co.uk/'
-    },
-    {
-      startDate: 'Jun 2015',
-      endDate: 'Jun 2016',
-      role: 'Undergraduate Trainee',
-      company: 'Software Solved',
-      website: 'https://www.softwaresolved.com/'
-    }
-  ];
+  jobs: Observable<any[]>;
+
+  constructor(db: AngularFirestore) {
+    this.jobs = db.collection('work-history', ref => ref.orderBy('startTimestamp', 'desc')).valueChanges();
+  }
 
   ngOnInit() {
   }

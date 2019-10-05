@@ -4,4 +4,5 @@ export interface Job {
     role: string;
     company: string;
     website: string;
+    startTimestamp: any;
 }

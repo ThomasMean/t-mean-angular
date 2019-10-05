@@ -1,11 +1,20 @@
 import { TestBed, async } from '@angular/core/testing';
 import { RouterTestingModule } from '@angular/router/testing';
 import { AppComponent } from './app.component';
-import { HeaderComponent } from './components/header/header.component';
-import { ProfileComponent } from './components/profile/profile.component';
 import { MatToolbarModule } from '@angular/material';
-import { WorkHistoryComponent } from './components/work-history/work-history.component';
-import { WorkHistoryJobComponent } from './components/work-history/work-history-job/work-history-job.component';
+import { Component } from '@angular/core';
+
+@Component({
+  selector: 'app-profile',
+  template: ''
+})
+class MockProfileComponent {}
+
+@Component({
+  selector: 'app-header',
+  template: ''
+})
+class MockHeaderComponent {}
 
 describe('AppComponent', () => {
   beforeEach(async(() => {
@@ -16,10 +25,8 @@ describe('AppComponent', () => {
       ],
       declarations: [
         AppComponent,
-        HeaderComponent,
-        ProfileComponent,
-        WorkHistoryComponent,
-        WorkHistoryJobComponent
+        MockHeaderComponent,
+        MockProfileComponent
       ],
     }).compileComponents();
   }));
