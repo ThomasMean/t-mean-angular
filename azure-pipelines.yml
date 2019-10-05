@@ -30,5 +30,5 @@ steps:
     displayName: "run testing"
 
   - script: |
-      ng deploy  --repo=https://github.com/ThomasMean/t-mean-angular.git --name="Thomas Mean" --email=mail@thomasmean.co.uk --base-href=/t-mean-angular/
+      ng deploy
     displayName: "deploy to github pages"
