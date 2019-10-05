@@ -4,10 +4,10 @@ import { ProfileComponent } from './profile.component';
 import { Component } from '@angular/core';
 
 @Component({
-  selector: 'app-work-history',
+  selector: 'app-history',
   template: ''
 })
-class MockWorkHistoryComponent {}
+class MockHistoryComponent {}
 
 @Component({
   selector: 'app-repository-list',
@@ -21,9 +21,8 @@ describe('ProfileComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ ProfileComponent, MockWorkHistoryComponent, MockRepositoryListComponent ]
-    })
-    .compileComponents();
+      declarations: [ProfileComponent, MockHistoryComponent, MockRepositoryListComponent]
+    }).compileComponents();
   }));
 
   beforeEach(() => {

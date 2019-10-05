@@ -1,0 +1,6 @@
+<h2>Education History</h2>
+
+<app-education-history-item
+  *ngFor="let school of schools | async"
+  [school]="school"
+></app-education-history-item>

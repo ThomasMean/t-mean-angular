@@ -18,11 +18,23 @@ import { AngularFirestore, AngularFirestoreModule } from '@angular/fire/firestor
 import { RepositoryListComponent } from './components/repository-list/repository-list.component';
 import { RepositoryViewComponent } from './components/repository-list/repository-view/repository-view.component';
 import { HttpClientModule } from '@angular/common/http';
-
+import { EducationHistoryComponent } from './components/education-history/education-history.component';
+import { EducationHistoryItemComponent } from './components/education-history/education-history-item/education-history-item.component';
+import { HistoryComponent } from './components/history/history.component';
 
 @NgModule({
-  declarations: [AppComponent, HeaderComponent, ProfileComponent,
-    WorkHistoryComponent, WorkHistoryJobComponent, RepositoryListComponent, RepositoryViewComponent],
+  declarations: [
+    AppComponent,
+    HeaderComponent,
+    ProfileComponent,
+    WorkHistoryComponent,
+    WorkHistoryJobComponent,
+    RepositoryListComponent,
+    RepositoryViewComponent,
+    EducationHistoryComponent,
+    EducationHistoryItemComponent,
+    HistoryComponent
+  ],
   imports: [
     BrowserModule,
     AppRoutingModule,
