@@ -9,13 +9,19 @@ import { Component } from '@angular/core';
 })
 class MockWorkHistoryComponent {}
 
+@Component({
+  selector: 'app-repository-list',
+  template: ''
+})
+class MockRepositoryListComponent {}
+
 describe('ProfileComponent', () => {
   let component: ProfileComponent;
   let fixture: ComponentFixture<ProfileComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ ProfileComponent, MockWorkHistoryComponent ]
+      declarations: [ ProfileComponent, MockWorkHistoryComponent, MockRepositoryListComponent ]
     })
     .compileComponents();
   }));

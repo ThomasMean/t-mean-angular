@@ -15,10 +15,14 @@ import { WorkHistoryComponent } from './components/work-history/work-history.com
 import { WorkHistoryJobComponent } from './components/work-history/work-history-job/work-history-job.component';
 import { environment } from '../environments/environment';
 import { AngularFirestore, AngularFirestoreModule } from '@angular/fire/firestore';
+import { RepositoryListComponent } from './components/repository-list/repository-list.component';
+import { RepositoryViewComponent } from './components/repository-list/repository-view/repository-view.component';
+import { HttpClientModule } from '@angular/common/http';
 
 
 @NgModule({
-  declarations: [AppComponent, HeaderComponent, ProfileComponent, WorkHistoryComponent, WorkHistoryJobComponent],
+  declarations: [AppComponent, HeaderComponent, ProfileComponent,
+    WorkHistoryComponent, WorkHistoryJobComponent, RepositoryListComponent, RepositoryViewComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,
@@ -28,9 +32,8 @@ import { AngularFirestore, AngularFirestoreModule } from '@angular/fire/firestor
     FlexLayoutModule,
     AngularFireModule.initializeApp(environment.firebase),
     AngularFireDatabaseModule,
-    AngularFirestoreModule
-
-
+    AngularFirestoreModule,
+    HttpClientModule
   ],
   providers: [AngularFirestore],
   bootstrap: [AppComponent]

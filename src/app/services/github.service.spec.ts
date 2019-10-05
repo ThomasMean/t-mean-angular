@@ -1,9 +1,10 @@
-// Http testing module and mocking controller
-import { HttpClientTestingModule, HttpTestingController } from '@angular/common/http/testing';
+import {
+  HttpClientTestingModule,
+  HttpTestingController
+} from '@angular/common/http/testing';
 
-// Other imports
 import { TestBed } from '@angular/core/testing';
-import { HttpClient, HttpErrorResponse } from '@angular/common/http';
+import { HttpClient } from '@angular/common/http';
 
 import { GithubService } from './github.service';
 
@@ -12,8 +13,9 @@ describe('GithubService', () => {
   let httpTestingController: HttpTestingController;
   let service: GithubService;
 
-  beforeEach(() => TestBed.configureTestingModule({imports: [ HttpClientTestingModule ]}));
-
+  beforeEach(() =>
+    TestBed.configureTestingModule({ imports: [HttpClientTestingModule] })
+  );
 
   beforeEach(() => {
     httpClient = TestBed.get(HttpClient);
@@ -25,18 +27,19 @@ describe('GithubService', () => {
     expect(service).toBeTruthy();
   });
 
-  it('can load github user project data', () => {
+  it('can load github user repo data', () => {
+    const respData = { name: 'TestName' };
 
-    const dummy = {project: 'Test Project'};
-
-    service.getProjects().subscribe(data => {
-      expect(data).toEqual(dummy);
+    service.getRepos().subscribe(data => {
+      expect(data.name).toEqual('TestName');
     });
 
-    const req = httpTestingController.expectOne('https://api.github.com/users/ThomasMean/projects');
+    const req = httpTestingController.expectOne(
+      'https://api.github.com/users/ThomasMean/repos'
+    );
 
     expect(req.request.method).toEqual('GET');
-    req.flush(dummy);
+    req.flush(respData);
     httpTestingController.verify();
   });
 

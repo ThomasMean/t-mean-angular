@@ -1,9 +1,19 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { WorkHistoryComponent } from './work-history.component';
-import { WorkHistoryJobComponent } from './work-history-job/work-history-job.component';
 import { EMPTY } from 'rxjs';
 import { AngularFirestore } from '@angular/fire/firestore';
+import { Component, Input } from '@angular/core';
+import { Job } from 'src/app/models/job.model';
+
+
+@Component({
+  selector: 'app-work-history-job',
+  template: ''
+})
+class MockWorkHistoryJobComponent {
+  @Input() job: Job;
+}
 
 describe('WorkHistoryComponent', () => {
   let component: WorkHistoryComponent;
@@ -21,7 +31,7 @@ describe('WorkHistoryComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ WorkHistoryComponent, WorkHistoryJobComponent ],
+      declarations: [ WorkHistoryComponent, MockWorkHistoryJobComponent ],
       providers: [{provide: AngularFirestore, useValue: angularFirestoreStub}]
     })
     .compileComponents();
