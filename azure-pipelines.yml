@@ -4,31 +4,31 @@
 # https://docs.microsoft.com/azure/devops/pipelines/languages/javascript
 
 trigger:
-- master
+  - master
 
 pool:
-  vmImage: 'ubuntu-latest'
+  vmImage: "ubuntu-latest"
 
 steps:
-- task: NodeTool@0
-  inputs:
-    versionSpec: '10.x'
-  displayName: 'Install Node.js'
-
-- script: |
-    npm install -g @angular/cli
-    npm install
-    ng build --prod
-  displayName: 'npm install and build'
-
-- script: |
-    ng lint
-  displayName: 'run linting'
-  
-- script: |
-    npm run test-pipeline
-  displayName: 'run testing'
+  - task: NodeTool@0
+    inputs:
+      versionSpec: "10.x"
+    displayName: "Install Node.js"
 
   - script: |
-    ng deploy
-  displayName: 'deploy to github pages'
+      npm install -g @angular/cli
+      npm install
+      ng build --prod
+    displayName: "npm install and build"
+
+  - script: |
+      ng lint
+    displayName: "run linting"
+
+  - script: |
+      npm run test-pipeline
+    displayName: "run testing"
+
+  - script: |
+      ng deploy  --repo=https://github.com/ThomasMean/t-mean-angular.git --name="Thomas Mean" --email=mail@thomasmean.co.uk
+    displayName: "deploy to github pages"
