@@ -12,4 +12,8 @@ export class EducationHistoryItemComponent implements OnInit {
   constructor() {}
 
   ngOnInit() {}
+
+  getResults() {
+    return `${this.school.level} in ${this.school.subjects.join(', ')}`;
+  }
 }

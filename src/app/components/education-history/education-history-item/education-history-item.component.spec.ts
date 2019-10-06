@@ -32,4 +32,8 @@ describe('EducationHistoryItemComponent', () => {
   it('should create', () => {
     expect(component).toBeTruthy();
   });
+
+  it('should render out results correctly', () => {
+    expect(component.getResults()).toEqual('BSc in Computer Science and Mathematics (2:1)');
+  });
 });

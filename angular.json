@@ -110,9 +110,9 @@
         "deploy": {
           "builder": "angular-cli-ghpages:deploy",
           "options": {
-            "baseHref": "https://thomasmean.github.io/t-mean-angular/",
             "name": "Tom Mean",
-            "email": "mail@thomasmean.co.uk"
+            "email": "mail@thomasmean.co.uk",
+            "cname": "thomasmean.co.uk"
           }
         }
       }
