@@ -15,13 +15,24 @@ class MockHistoryComponent {}
 })
 class MockRepositoryListComponent {}
 
+@Component({
+  selector: 'app-references',
+  template: ''
+})
+class MockReferencesComponent {}
+
 describe('ProfileComponent', () => {
   let component: ProfileComponent;
   let fixture: ComponentFixture<ProfileComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ProfileComponent, MockHistoryComponent, MockRepositoryListComponent]
+      declarations: [
+        ProfileComponent,
+        MockHistoryComponent,
+        MockRepositoryListComponent,
+        MockReferencesComponent
+      ]
     }).compileComponents();
   }));
 

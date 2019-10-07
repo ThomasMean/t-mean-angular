@@ -2,3 +2,11 @@
   border-radius: 250px;
   width: 15%;
 }
+
+section {
+  height: 100vh;
+}
+
+section:nth-child(even) {
+  background-color: grey;
+}

@@ -21,6 +21,9 @@ import { HttpClientModule } from '@angular/common/http';
 import { EducationHistoryComponent } from './components/education-history/education-history.component';
 import { EducationHistoryItemComponent } from './components/education-history/education-history-item/education-history-item.component';
 import { HistoryComponent } from './components/history/history.component';
+import { IntroComponent } from './components/intro/intro.component';
+import { ReferencesComponent } from './components/references/references.component';
+import { ReferenceItemComponent } from './components/references/reference-item/reference-item.component';
 
 @NgModule({
   declarations: [
@@ -33,7 +36,10 @@ import { HistoryComponent } from './components/history/history.component';
     RepositoryViewComponent,
     EducationHistoryComponent,
     EducationHistoryItemComponent,
-    HistoryComponent
+    HistoryComponent,
+    IntroComponent,
+    ReferencesComponent,
+    ReferenceItemComponent
   ],
   imports: [
     BrowserModule,
