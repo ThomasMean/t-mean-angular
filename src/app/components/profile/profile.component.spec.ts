@@ -21,6 +21,12 @@ class MockRepositoryListComponent {}
 })
 class MockReferencesComponent {}
 
+@Component({
+  selector: 'app-intro',
+  template: ''
+})
+class MockIntroComponent {}
+
 describe('ProfileComponent', () => {
   let component: ProfileComponent;
   let fixture: ComponentFixture<ProfileComponent>;
@@ -31,7 +37,8 @@ describe('ProfileComponent', () => {
         ProfileComponent,
         MockHistoryComponent,
         MockRepositoryListComponent,
-        MockReferencesComponent
+        MockReferencesComponent,
+        MockIntroComponent
       ]
     }).compileComponents();
   }));
