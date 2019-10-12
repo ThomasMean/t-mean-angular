@@ -119,11 +119,7 @@
         },
         "deploy": {
           "builder": "angular-cli-ghpages:deploy",
-          "options": {
-            "name": "Tom Mean",
-            "email": "mail@thomasmean.co.uk",
-            "cname": "thomasmean.co.uk"
-          }
+          "options": {}
         }
       }
     }

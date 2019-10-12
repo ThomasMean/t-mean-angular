@@ -30,5 +30,5 @@ steps:
     displayName: "run testing"
 
   - script: |
-      ng deploy
+      ng deploy --name="Tom Mean" --email="mail@thomasmean.co.uk" --cname="thomasmean.co.uk"
     displayName: "deploy to github pages"
