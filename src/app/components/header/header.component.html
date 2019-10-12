@@ -10,23 +10,23 @@
     <span class="ion ion-logo-linkedin"></span>
   </a>
   <div fxLayout="row" fxShow="false" fxShow.gt-sm>
-    <a class="header-item no-underline" href="#profile">Profile</a>
-    <a class="header-item no-underline" href="#experience">Experience</a>
-    <a class="header-item no-underline" href="#education">Education</a>
-    <a class="header-item no-underline" href="#projects">Projects</a>
-    <a class="header-item no-underline" href="#recommend">Recommendations</a>
-    <a class="header-item no-underline" href="#contact">Contact</a>
+    <a class="header-item no-underline" (click)="scrollById('profile')">Profile</a>
+    <a class="header-item no-underline" (click)="scrollById('experience')">Experience</a>
+    <a class="header-item no-underline" (click)="scrollById('education')">Education</a>
+    <a class="header-item no-underline" (click)="scrollById('projects')">Projects</a>
+    <a class="header-item no-underline" (click)="scrollById('recommend')">Recommendations</a>
+    <a class="header-item no-underline" (click)="scrollById('contact')">Contact</a>
   </div>
   <a [mat-menu-trigger-for]="menu" fxHide="false" fxHide.gt-sm>
     <span class="white-no-underline header-item ion ion-md-menu"></span>
   </a>
 </mat-toolbar>
 <mat-menu x-position="before" #menu="matMenu">
-  <a class="no-underline" href="#profile"> <span mat-menu-item class="header-item-mobile">Profile</span></a>
-  <a class="no-underline" href="#experience"> <span mat-menu-item class="header-item-mobile">Experience</span></a>
-  <a class="no-underline" href="#education"> <span mat-menu-item class="header-item-mobile">Education</span></a>
-  <a class="no-underline" href="#projects"> <span mat-menu-item class="header-item-mobile">Projects</span></a>
-  <a class="no-underline" href="#recommend"> <span mat-menu-item class="header-item-mobile">Recommendations</span></a>
-  <a class="no-underline" href="#contact"> <span mat-menu-item class="header-item-mobile">Contact</span></a>
+  <span mat-menu-item class="header-item-mobile" (click)="scrollById('profile')">Profile</span>
+  <span mat-menu-item class="header-item-mobile" (click)="scrollById('experience')">Experience</span>
+  <span mat-menu-item class="header-item-mobile" (click)="scrollById('education')">Education</span>
+  <span mat-menu-item class="header-item-mobile" (click)="scrollById('projects')">Projects</span>
+  <span mat-menu-item class="header-item-mobile" (click)="scrollById('recommend')">Recommendations</span>
+  <span mat-menu-item class="header-item-mobile" (click)="scrollById('contact')">Contact</span>
   <!--<button mat-menu-item>Help</button>-->
 </mat-menu>

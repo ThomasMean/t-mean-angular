@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { MatToolbarModule } from '@angular/material/toolbar';
 
 @Component({
   selector: 'app-header',
@@ -10,4 +9,11 @@ export class HeaderComponent implements OnInit {
   constructor() {}
 
   ngOnInit() {}
+
+  scrollById(id: string) {
+    const el: HTMLElement = document.getElementById(id);
+    if (el) {
+      el.scrollIntoView();
+    }
+  }
 }
