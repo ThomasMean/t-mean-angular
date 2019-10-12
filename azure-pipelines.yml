@@ -13,8 +13,6 @@ pool:
 steps:
 
   - task: NodeTool@0
-    env:
-      GH_TOKEN: $(GH_TOKEN)
     inputs:
       versionSpec: "10.x"
     displayName: "Install Node.js"
@@ -35,4 +33,6 @@ steps:
 
   - script: |
       ng deploy --name="Tom Mean" --email=mail@thomasmean.co.uk --cname=thomasmean.co.uk --repo=https://github.com/ThomasMean/t-mean-angular.git
+    env:
+      GH_TOKEN: $(GH_TOKEN)
     displayName: "deploy to github pages"
