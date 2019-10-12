@@ -9,6 +9,8 @@ trigger:
 pool:
   vmImage: "ubuntu-latest"
 
+env:
+    GH_TOKEN: $(GH_TOKEN)
 steps:
   - task: NodeTool@0
     inputs:
