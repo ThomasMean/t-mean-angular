@@ -5,29 +5,61 @@ import { MatToolbarModule } from '@angular/material';
 import { Component } from '@angular/core';
 
 @Component({
-  selector: 'app-profile',
-  template: ''
-})
-class MockProfileComponent {}
-
-@Component({
   selector: 'app-header',
   template: ''
 })
 class MockHeaderComponent {}
 
+@Component({
+  selector: 'app-work-history',
+  template: ''
+})
+class MockWorkHistoryComponent {}
+
+@Component({
+  selector: 'app-education-history',
+  template: ''
+})
+class MockEducationHistoryComponent {}
+
+@Component({
+  selector: 'app-repository-list',
+  template: ''
+})
+class MockRepositoryListComponent {}
+
+@Component({
+  selector: 'app-references',
+  template: ''
+})
+class MockReferencesComponent {}
+
+@Component({
+  selector: 'app-intro',
+  template: ''
+})
+class MockIntroComponent {}
+
+@Component({
+  selector: 'app-contact',
+  template: ''
+})
+class MockContactComponent {}
+
 describe('AppComponent', () => {
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      imports: [
-        RouterTestingModule,
-        MatToolbarModule
-      ],
+      imports: [RouterTestingModule, MatToolbarModule],
       declarations: [
         AppComponent,
         MockHeaderComponent,
-        MockProfileComponent
-      ],
+        MockWorkHistoryComponent,
+        MockEducationHistoryComponent,
+        MockRepositoryListComponent,
+        MockReferencesComponent,
+        MockIntroComponent,
+        MockContactComponent
+      ]
     }).compileComponents();
   }));
 
@@ -35,11 +67,5 @@ describe('AppComponent', () => {
     const fixture = TestBed.createComponent(AppComponent);
     const app = fixture.debugElement.componentInstance;
     expect(app).toBeTruthy();
-  });
-
-  it(`should have as title 't-mean-angular'`, () => {
-    const fixture = TestBed.createComponent(AppComponent);
-    const app = fixture.debugElement.componentInstance;
-    expect(app.title).toEqual('t-mean-angular');
   });
 });

@@ -1,0 +1,30 @@
+<a id="contact"></a>
+<div class="pad-top panel">
+  <h2>Want to speak to me?</h2>
+  <div class="contact-form" [formGroup]="emailForm">
+    <mat-form-field>
+      <input matInput placeholder="Your Name" formControlName="name" required />
+      <mat-error *ngIf="emailForm.controls.name.invalid">Please tell me your name.</mat-error>
+    </mat-form-field>
+
+    <mat-form-field>
+      <input matInput placeholder="Your Email" formControlName="email" required />
+      <mat-error *ngIf="emailForm.controls.email.invalid">{{ getEmailErrorMessage() }}</mat-error>
+    </mat-form-field>
+
+    <mat-form-field>
+      <input matInput placeholder="Subject of your query" formControlName="subject" required />
+      <mat-error *ngIf="emailForm.controls.subject.invalid">Please tell me a subject for your query.</mat-error>
+    </mat-form-field>
+
+    <mat-form-field>
+      <input matInput placeholder="What would you like to say?.." formControlName="content" required />
+      <mat-error *ngIf="emailForm.controls.content.invalid">Please tell me what you would like to say.</mat-error>
+    </mat-form-field>
+
+    <mat-error *ngIf="sendError" class="pad-bottom">{{ sendError }}<br /></mat-error>
+    <div class="button-wrapper">
+      <button mat-button class="submit-button mat-elevation-z0" (click)="sendEmail()">Submit Query</button>
+    </div>
+  </div>
+</div>

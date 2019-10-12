@@ -1,6 +1,6 @@
-<h2>What did I study?</h2>
+<a id="education"></a>
+<div class="pad-top panel">
+  <h2>What did I study?</h2>
 
-<app-education-history-item
-  *ngFor="let school of schools | async"
-  [school]="school"
-></app-education-history-item>
+  <app-education-history-item *ngFor="let school of schools | async" [school]="school"></app-education-history-item>
+</div>

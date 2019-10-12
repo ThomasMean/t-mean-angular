@@ -1,5 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
-import { School } from 'src/app/models/school.model';
+import { School } from 'src/app/interfaces/school';
 
 @Component({
   selector: 'app-education-history-item',

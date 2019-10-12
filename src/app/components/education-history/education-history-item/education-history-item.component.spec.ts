@@ -1,7 +1,7 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { EducationHistoryItemComponent } from './education-history-item.component';
-import { School } from 'src/app/models/school.model';
+import { School } from 'src/app/interfaces/school';
 
 describe('EducationHistoryItemComponent', () => {
   let component: EducationHistoryItemComponent;

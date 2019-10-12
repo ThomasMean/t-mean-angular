@@ -1,4 +1,7 @@
-<h2>What have I worked on?</h2>
-<div *ngFor="let repository of repositories | async">
-  <app-repository-view [repository]="repository"></app-repository-view>
+<a id="projects"></a>
+<div class="pad-top panel">
+  <h2>What have I worked on?</h2>
+  <div *ngFor="let repository of repositories | async">
+    <app-repository-view [repository]="repository"></app-repository-view>
+  </div>
 </div>

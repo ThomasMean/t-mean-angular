@@ -1,5 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
-import { Repository } from 'src/app/models/repository.model';
+import { Repository } from 'src/app/interfaces/repository';
 
 @Component({
   selector: 'app-repository-view',
@@ -7,14 +7,9 @@ import { Repository } from 'src/app/models/repository.model';
   styleUrls: ['./repository-view.component.scss']
 })
 export class RepositoryViewComponent implements OnInit {
-
-
   @Input() repository: Repository;
 
-  constructor() {
-  }
+  constructor() {}
 
-  ngOnInit() {
-  }
-
+  ngOnInit() {}
 }

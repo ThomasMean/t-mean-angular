@@ -1,14 +1,25 @@
-.spacer {
+.header-item {
+  padding: 0 10px;
+  color: white;
+}
+
+.pad-menu-burger {
+  align-items: center;
+}
+
+.no-underline {
+  color: white;
+  text-decoration: none;
+}
+
+.fill-remaining-space {
+  /*This fills the remaining space, by using flexbox.  
+ Every toolbar row uses a flexbox row layout. */
   flex: 1 1 auto;
 }
 
-.ion {
-  padding: 0 14px;
-}
-
-.pad-under-header {
-  height: 50px;
-}
-.mat-toolbar-row {
-  font-family: 'Exo 2', sans-serif;
+.mat-menu-item,
+.mat-toolbar {
+  font-family: 'Exo 2', sans-serif !important;
+  background-color: #bababa;
 }

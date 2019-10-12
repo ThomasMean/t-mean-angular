@@ -1,7 +1,7 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { ReferenceItemComponent } from './reference-item.component';
-import { Reference } from 'src/app/models/reference.model';
+import { Reference } from 'src/app/interfaces/reference';
 
 describe('ReferenceItemComponent', () => {
   const ref: Reference = {

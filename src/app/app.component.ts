@@ -6,6 +6,4 @@ import { HeaderComponent } from './components/header/header.component';
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss']
 })
-export class AppComponent {
-  title = 't-mean-angular';
-}
+export class AppComponent {}

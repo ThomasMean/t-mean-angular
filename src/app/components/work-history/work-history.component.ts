@@ -11,9 +11,7 @@ export class WorkHistoryComponent implements OnInit {
   jobs: Observable<any[]>;
 
   constructor(db: AngularFirestore) {
-    this.jobs = db
-      .collection('work-history', ref => ref.orderBy('startTimestamp', 'desc'))
-      .valueChanges();
+    this.jobs = db.collection('work-history', ref => ref.orderBy('startTimestamp', 'desc')).valueChanges();
   }
 
   ngOnInit() {}

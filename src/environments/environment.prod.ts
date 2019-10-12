@@ -8,5 +8,6 @@ export const environment = {
     storageBucket: 'tmeanwebsite.appspot.com',
     messagingSenderId: '651711277799',
     appId: '1:651711277799:web:8eec6ce32ccdbdea68d042'
-  }
+  },
+  email: 'https://pure-bayou-73796.herokuapp.com'
 };

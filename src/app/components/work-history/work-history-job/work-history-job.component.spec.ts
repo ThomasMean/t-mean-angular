@@ -1,7 +1,7 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { WorkHistoryJobComponent } from './work-history-job.component';
-import { Job } from 'src/app/models/job.model';
+import { Job } from 'src/app/interfaces/job';
 
 describe('WorkHistoryJobComponent', () => {
   const job: Job = {

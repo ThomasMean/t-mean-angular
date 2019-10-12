@@ -2,9 +2,10 @@ import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { EducationHistoryComponent } from './education-history.component';
 import { Input, Component } from '@angular/core';
-import { School } from 'src/app/models/school.model';
-import { EMPTY } from 'rxjs';
+import { School } from 'src/app/interfaces/school';
+import { EMPTY, of } from 'rxjs';
 import { AngularFirestore } from '@angular/fire/firestore';
+import { first } from 'rxjs/operators';
 
 @Component({
   selector: 'app-education-history-item',
@@ -13,11 +14,30 @@ import { AngularFirestore } from '@angular/fire/firestore';
 class MockEducationHistoryItemComponent {
   @Input() school: School;
 }
+
+const school1: School = {
+  startDate: 'Oct 2019',
+  endDate: 'Present',
+  name: 'University of York',
+  level: 'BSc',
+  subjects: ['Computer Science and Mathematics (2:1)'],
+  startTimestamp: { seconds: 12345 }
+};
+
+const school2: School = {
+  startDate: 'Oct 2020',
+  endDate: 'Present',
+  name: 'University of York',
+  level: 'BSc',
+  subjects: ['Computer Science and Mathematics (2:1)'],
+  startTimestamp: { seconds: 1234 }
+};
+
 describe('EducationHistoryComponent', () => {
   let component: EducationHistoryComponent;
   let fixture: ComponentFixture<EducationHistoryComponent>;
 
-  const data = EMPTY;
+  const data = of([school1, school2]);
 
   const collectionStub = {
     valueChanges: jasmine.createSpy('valueChanges').and.returnValue(data)
@@ -37,11 +57,17 @@ describe('EducationHistoryComponent', () => {
   beforeEach(() => {
     fixture = TestBed.createComponent(EducationHistoryComponent);
     component = fixture.componentInstance;
-    component.schools = EMPTY;
     fixture.detectChanges();
   });
 
   it('should create', () => {
     expect(component).toBeTruthy();
+  });
+
+  it('should load schools', () => {
+    component.ngOnInit();
+    component.schools.subscribe(schools => {
+      expect(schools[0].startDate).toEqual('Oct 2019');
+    });
   });
 });

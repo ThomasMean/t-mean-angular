@@ -1,0 +1,16 @@
+.info {
+  padding-bottom: 1%;
+}
+.item {
+  height: 100%;
+}
+
+.item:nth-child(odd) {
+  background: url('/assets/img/background-2.jpg');
+  background-size: cover;
+}
+
+.item:nth-child(even) {
+  background-image: url('/assets/img/background-3.jpg');
+  background-size: cover;
+}

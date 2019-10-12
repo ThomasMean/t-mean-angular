@@ -11,11 +11,7 @@ export class EducationHistoryComponent implements OnInit {
   schools: Observable<any[]>;
 
   constructor(db: AngularFirestore) {
-    this.schools = db
-      .collection('education-history', ref =>
-        ref.orderBy('startTimestamp', 'desc')
-      )
-      .valueChanges();
+    this.schools = db.collection('education-history', ref => ref.orderBy('startTimestamp', 'desc')).valueChanges();
   }
 
   ngOnInit() {}

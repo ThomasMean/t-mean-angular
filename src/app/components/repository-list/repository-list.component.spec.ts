@@ -3,8 +3,7 @@ import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 import { RepositoryListComponent } from './repository-list.component';
 import { Component, Input } from '@angular/core';
 import { HttpClientTestingModule } from '@angular/common/http/testing';
-import { Repository } from 'src/app/models/repository.model';
-
+import { Repository } from 'src/app/interfaces/repository';
 
 @Component({
   selector: 'app-repository-view',
@@ -20,10 +19,9 @@ describe('RepositoryListComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ RepositoryListComponent, MockRepositoryViewComponent ],
+      declarations: [RepositoryListComponent, MockRepositoryViewComponent],
       imports: [HttpClientTestingModule]
-    })
-    .compileComponents();
+    }).compileComponents();
   }));
 
   beforeEach(() => {

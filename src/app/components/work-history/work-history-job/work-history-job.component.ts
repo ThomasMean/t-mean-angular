@@ -1,5 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
-import { Job } from 'src/app/models/job.model';
+import { Job } from 'src/app/interfaces/job';
 
 @Component({
   selector: 'app-work-history-job',
@@ -7,17 +7,9 @@ import { Job } from 'src/app/models/job.model';
   styleUrls: ['./work-history-job.component.scss']
 })
 export class WorkHistoryJobComponent implements OnInit {
-
   @Input() job: Job;
 
+  constructor() {}
 
-  constructor() { }
-
-
-  ngOnInit() {
-  }
-
-
-
-
+  ngOnInit() {}
 }

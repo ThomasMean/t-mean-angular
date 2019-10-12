@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { GithubService } from 'src/app/services/github.service';
 import { Observable } from 'rxjs';
-import { Repository } from 'src/app/models/repository.model';
+import { Repository } from 'src/app/interfaces/repository';
 
 @Component({
   selector: 'app-repository-list',
@@ -9,14 +9,11 @@ import { Repository } from 'src/app/models/repository.model';
   styleUrls: ['./repository-list.component.scss']
 })
 export class RepositoryListComponent implements OnInit {
-
   repositories: Observable<Repository>;
 
   constructor(private githubService: GithubService) {
     this.repositories = this.githubService.getRepos();
   }
 
-  ngOnInit() {
-  }
-
+  ngOnInit() {}
 }
