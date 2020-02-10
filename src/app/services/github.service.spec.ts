@@ -18,9 +18,9 @@ describe('GithubService', () => {
   );
 
   beforeEach(() => {
-    httpClient = TestBed.get(HttpClient);
-    httpTestingController = TestBed.get(HttpTestingController);
-    service = TestBed.get(GithubService);
+    httpClient = TestBed.inject(HttpClient);
+    httpTestingController = TestBed.inject(HttpTestingController);
+    service = TestBed.inject(GithubService);
   });
 
   it('should be created', () => {

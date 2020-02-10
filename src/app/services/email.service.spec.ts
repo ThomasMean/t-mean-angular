@@ -20,9 +20,9 @@ describe('EmailService', () => {
   beforeEach(() => TestBed.configureTestingModule({ imports: [HttpClientTestingModule] }));
 
   beforeEach(() => {
-    httpClient = TestBed.get(HttpClient);
-    httpTestingController = TestBed.get(HttpTestingController);
-    service = TestBed.get(EmailService);
+    httpClient = TestBed.inject(HttpClient);
+    httpTestingController = TestBed.inject(HttpTestingController);
+    service = TestBed.inject(EmailService);
   });
 
   it('should be created', () => {
