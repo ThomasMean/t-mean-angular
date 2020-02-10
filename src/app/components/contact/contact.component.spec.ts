@@ -4,7 +4,9 @@ import { ContactComponent } from './contact.component';
 import { EmailContent } from 'src/app/interfaces/email-content';
 import { EmailService } from 'src/app/services/email.service';
 import { of, throwError } from 'rxjs';
-import { MatFormFieldModule, MatInputModule, MatSnackBarModule } from '@angular/material';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatInputModule } from '@angular/material/input';
+import { MatSnackBarModule } from '@angular/material/snack-bar';
 import { ReactiveFormsModule } from '@angular/forms';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
