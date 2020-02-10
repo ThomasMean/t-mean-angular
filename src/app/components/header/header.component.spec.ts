@@ -24,4 +24,11 @@ describe('HeaderComponent', () => {
   it('should create', () => {
     expect(component).toBeTruthy();
   });
+
+  it('should scroll if id found', () => {
+    const id = 'toolbar';
+    const scrollSpy = spyOn(document.getElementById(id), 'scrollIntoView').and.callThrough();
+    component.scrollById(id);
+    expect(scrollSpy).toHaveBeenCalled();
+  });
 });
